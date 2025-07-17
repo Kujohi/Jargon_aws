@@ -1,0 +1,41 @@
+services:
+  ml-service:
+    build:
+      context: ./time_series_ML
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    networks:
+      - jargon-network
+
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - AWS_REGION=ap-southeast-1
+      # Minimal config for testing
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_RDS_ENDPOINT=localhost
+      - AWS_RDS_PORT=5432
+      - AWS_RDS_DATABASE=test
+      - AWS_RDS_USERNAME=test
+      - AWS_RDS_PASSWORD=test
+      - COGNITO_USER_POOL_ID=test
+      - COGNITO_CLIENT_ID=test
+      - COGNITO_CLIENT_SECRET=test
+    depends_on:
+      - ml-service
+    networks:
+      - jargon-network
+
+networks:
+  jargon-network:
+    driver: bridge 

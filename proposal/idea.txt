@@ -1,0 +1,418 @@
+Jargon AI Technology Hackathon 2025
+General Brief 
+
+Please fill up this table and use this document as a template to write your proposal. 
+
+Challenge Statement	#9_IT Challenge_Ai Financial Coach - 6-Jar Money Management
+Team Name	Nhóm 166
+
+Team Members
+Full Name	Role	Email Address	School Name 
+(if applicable)	Faculty / Area of Study	LinkedIn Profile URL
+Member 1	Team leader, AI Engineer	hiep11102@gmail.com	Vietnamese-German University	Computer Science	https://www.linkedin.com/in/duy-hiep-do-9336432a0/
+Member 2	Software Engineer	nguyenquan.cybersec@gmail.com	Ton Duc Thang University	Information Technology	 https://www.linkedin.com/in/quannguyencybersec/
+Member 3	Software Engineer	work.tranlong@gmail.com	Ton Duc Thang University	Information Technology	https://www.linkedin.com/in/tran-long-b37511334/
+Member 4					
+Member 5					
+ 
+Content Outline
+
+Page No.
+Solutions Introduction 	3-9
+Impact of Solution	9-11
+Deep Dive into Solution	12-17
+Architecture of Solution	18-20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jargon AI: Intelligent Financial Management for Jargon AI
+
+Solutions Introduction 
+Jargon AI: Intelligent Finance AI Agent
+Jargon AI is an AI financial planning product specifically designed for Jargon AI. It is intended for supporting citizens of Vietnam toward financial strength and wealth through a sophisticated, personalized, and smart way toward managing money. Unlike the traditional fixed-jar-based approach, the Jargon AI actively divides the monthly income, actively predicts spending patterns, provides personalized recommendations, and complements the services provided by Jargon AI, offering a fully flexible and user-centric financial planning service.
+Main Features
+Jargon AI's core functions are rooted in some of the most sophisticated AI methods, providing an efficient and hassle-free financial administration process.
+1.	Predictive & Dynamic Jar Allocation
+We recommend replacing the conventional "6-Jar" rigid percentage allocations with an adaptive model. This flexible model recognizes the fact that rigid percentages rarely are appropriate for the broad incomes, life stages, and spending priorities of distinct users.
+How Allocation Works:
+Allocation by Jargon AI is factor-based and real-time, aiming to make specific financial recommendations.
+•	User Cohort: Different user groups (e.g., young professionals, families, retirees) have distinct financial needs.
+
+•	Major Data Covered: Complete data acquisition results in appropriate forecasting and recommendations.
+
+•	Allocation Drivers: These are those specific pieces of information through which funds are allocated from one jar to another.
+New User Onboarding:
+For first-time users, Jargon AI provides a speedy and personalized setup:
+•	Quick-Start Goal Wizard: Guides the user through setting first financial goals.
+
+•	Demographic Quiz: Gathers basic information like income, age, location, and interests to personalize first recommendations.
+
+•	Specific Objectives: Users can specifically state their financial objectives (e.g., "Save ₫50 Million for postgraduate study").
+
+•	Recommended Safety Buffer: Estimates personalized safety net based on area cost of living for financial stability.
+Established User Optimization:
+•	Jargon AI continuously improves allocations for current users by taking into account past performance and new trends.
+
+•	Past Cash-Flow Trends: examines historical revenue and expenses to comprehend normal financial trends.
+
+•	Jar-by-Jar Spending Discipline: Evaluates users' compliance with their jar spending plans.
+
+•	Finding trends in non-essential spending is known as "trending discretionary spend."
+
+•	Seasonality: Takes into consideration predictable changes in costs, such as increased summer utility bills and back-to-school costs.
+
+•	Predictive Alerts for Future Large Payments: Informs users ahead of time of major expected costs.
+An example of a scenario:
+User Situation: Due to Vietnam's hot summers, users typically spend 20% more on electricity. AI Reaction: Jargon AI automatically takes this pattern into account and raises the "Necessity Jar" by roughly 5–10% throughout these months.
+
+
+2.	Intelligent Transaction Classification & Advice
+Jargon AI's program constantly observes and categorises all user transactions automatically into the six financial jars. This real-time sorting, with the assistance of several input mechanisms, provides instant financial advice and actionable proposals, allowing the user to be current with their expenditure.
+How it Works:
+
+Automated Categorisation: Each transaction is automatically allocated to the most relevant jar (Necessity, Play, Education, Investment, Charity, Savings) based on the descriptions and the metadata.
+
+ In-Moment Spending Guidance: If the customer is going over budget, the system provides real-time recommendations.
+Sub-feature: Graph-Based Bill Recognition
+Jargon AI will have the capability of enabling the users automatically classify transactions simply by taking a photo of their receipts or bills. This function makes the expenditure tracking convenient and efficient with flawless financial categorization.
+Functionality
+•	You can upload or capture photos of paper bills and receipts.
+
+•	The program pulls pertinent details of the transactions like the date, merchant name, details of purchases, and total amount.
+
+•	These automatically captured details are then categorized in the appropriate financial jar.
+
+
+Advantages: Reduced time for the entry of information by hand, improved accuracy of tracked spending, and a general review of all expenses.
+Techniques of Image-Based Recognition:
+•	Optical Character Recognition (OCR): For converting text images into machine-readable information.
+
+•	Computer Vision (CV) & Machine Learning: For the extraction of meaningful information from the varied bill formats (e.g., layout recognition, key-value pair extraction).
+
+
+Example Scenario:
+
+ Transaction Example: "10.000₫ for Grocery payment" → This transaction goes to the Necessity Jar, and the corresponding fund is deducted.
+
+ Situation Example: A user has over-spent their "Play Jar" budget by 25% by the middle of the month.
+ AI Response: Jargon AI notifies the user immediately:
+ "You've over-spent your 'Play Jar' budget by 25% during the course of the month. Consider reducing discretionary spending during the remainder of the month or transferring a moderate amount from your 'Savings Jar' if urgent. I can give some ideas about money-saving activities?"
+Methods for Classification:
+
+ Natural Language Processing (NLP):
+•	BERT-based models (Sentence Transformers or fine-tuned DistilBERT): These powerful models are deployed for the purpose of automatically classifying and categorizing transactions into respective jars based upon metadata and transaction descriptions, identifying the semantic meaning of the text.
+
+•	LLM with formatted JSON result: Advanced Large Language Models are not only usable for classification, but also for producing formatted results enabling richer interpretations of transactions.
+3.	AI Agent Chatbot – Instant 24/7 Virtual Support
+Imagine having a friendly financial companion at your fingertips—ready to chat, offer advice, and even handle the nitty-gritty of your money management whenever you need it. That’s our AI Agent Chatbot: a 24/7 virtual support system that feels like texting a savvy friend about your finances.
+What it does for you
+•	Keeps your “jars” in shape. If you’re following the popular “jar” method of dividing your money—Necessities, Education, Play, etc.—our chatbot can instantly move funds between jars or adjust balances on the fly.
+
+•	Logs every purchase. Spent 10.000₫ on a bottle of water? Just tell the chatbot, and it records the transaction, updating the right jar automatically.
+
+•	Looks back so you can move forward. Wondering why your Necessity Jar ballooned this month? The bot digs into your recent transactions and points out patterns (like that seasonal electricity bump), so you understand exactly what’s happening.
+
+•	Helps you plan big goals. Whether it’s a new laptop in four months or an emergency fund, the system assesses your current habits, suggests budget tweaks, and lays out a clear savings roadmap.
+
+
+A Day in the Life of Your Chatbot
+1.	You: “Hey, I spent 10.000₫ on water today.”
+ Chatbot: Logs it under Necessities and adjusts your jar balance.
+
+
+2.	You: “Why did my Necessity Jar go up by 10% this month?”
+ Chatbot: “I checked your transactions—your electricity bills jumped 20% in December. I automatically nudged your Necessity Jar to cover it, so you didn’t have to scramble.”
+
+
+3.	You: “Move 10,000,000₫ or 10% from Necessities to Education.”
+ Chatbot: Transfers the funds instantly.
+
+
+4.	You: “I want a 30,000,000₫ laptop in four months. Can I do it?”
+ Chatbot: “Based on your spending patterns, you can—but it’ll take some tweaks. If you dial back Play Jar fun by 1,500,000₫ each month and reallocate 6,000,000₫ from your Savings Jar now, you’re on track. I can also show you extra spots to trim—like those little café splurges. Want a detailed breakdown?”
+
+
+How It Works (Behind the Scenes)
+•	Conversational AI. Our language model understands your questions and adapts its tone to feel approachable and clear.
+
+•	Smart orchestration. When you ask something, the chatbot decides which tools to call—whether it’s updating a jar, fetching transaction history, spotting trends, or building a savings plan.
+
+•	Real-time insights. By blending your own data with smart analyses (and even external knowledge when needed), the chatbot gives you personalized advice that evolves with your habits.
+
+
+4.	Personalized Jargon AI Product Promotion
+Jargon artificial intelligence will use its information analysis and understanding of customer monetary habits to propose appropriate Jargon AI products and services, promoting a strong association between the consumer and the financial institution.
+•	Loan Level Suggestions:
+o	The Jargon Machine Intelligence based on the client's past earnings, spending patterns, and creditworthiness can propose appropriate loan amounts that they can comfortably afford and borrow from Jargon AI. This feature enables users to make informed decisions on financing during the promotion of sound lending.
+
+•	Currency Exchange & Travel Promotions:
+o	If the predictive engine anticipates an increase in travel-related spending (e.g., identified through trending search queries, past seasonal travel, or explicit user goals), Jargon AI can proactively suggest Jargon AI's currency exchange services or highlight relevant flight promotions and travel packages offered through Jargon AI partnerships.
+
+•	Investment Opportunities:
+o	As a customer's 'assets'or investment jar, the framework can encourage proper Jargon AI purchase of goods (e.g. , Reserve Statements, together with increased interest rates, Joint Funds, or detailed stake compilations aligned with their risk tolerance and monetary intentions.
+
+•	Benefits: It aims at increasing the involvement of consumers in VP Bank's habitat, encouraging merchandise adoption, and providing seasonal, context-aware economic solutions.
+
+•	Methods:
+o	Predictive Analytics & Machine Learning: To forecast future spending categories and financial needs.
+
+o	Rule-based approaches: to overcome explicit product suggestions based on predefined standards (e.g. , Confidence in Reserves, Recognized Life Occurrences ).
+
+o	Customer Relationship Management (CRM) Integration: To access and leverage user profiles and product eligibility information.
+5.	Interactive Financial Visualization
+Jargon Automated Reasoning will provide an intuitive and synergistic visual image of information, allowing users to gain a profound understanding of their financial supervision at a glance.
+•	Types of Charts & Dashboards:
+o	Spend Category Breakdowns: A pie chart or barroom graph showing where money can be spent in different categories (e.g. , food, transport, and entertainment ).
+
+o	Income vs. Expense Trends: line graph illustrate fiscal movement beyond the duration of the fiscal year, focusing on periods of excess expenditure or otherwise deficit.
+
+o	Jar Performance Over Time: stacked baroque charts or territory graphs showing the evolution of alternatively depleting each fiscal jar.
+
+o	Goal Progress Trackers: Visual indicators (e.g., progress bars) for specific savings goals (e.g., laptop purchase, tuition fees).
+
+o	Predictive Insights Visuals: A simple chart showing budgeted spending and profit helps users visualize their progress towards monetary territories.
+
+•	Benefits: This assistance enhances client awareness of their financial habits, facilitates better decision making, and encourages prudent financial management using apparent ocular reactions.
+
+•	Methods:
+o	Data Aggregation and Processing: To compile and structure financial data for visualization.
+Frontend Development Frameworks: To render dynamic and interactive charts and dashboards within the user interface.
+
+Impact of Solution 
+Jargon machine intelligence provides useful rewards for Vietnamese civilization and its target listeners, Jargon AI customers, to stand out as a superior solution in the emerging technology finance market.
+1.	How Jargon AI Benefits Society and Target Audience?
+•	Enhanced Financial Literacy and Empowerment: Jargon machine intelligence goes beyond simple tracking to explain if certain monetary adjustments are made otherwise recommend. The current transparent, machine learning-based guidance encourages a deeper understanding of fiscal principles and empowers users to make more informed decisions about their money.
+
+•	Increased Financial Stability and Prosperity: The Jargon Machine Intelligence helps users avoid overspending, assemble nest egg excess properly, and obtain long-term economic intentions (to buy a house, education, or retirement) faster and with less stress.
+
+•	Reduced Financial Anxiety: The prepared alert, personalized plan, and 24-hour machine intelligence chatbot help provide a changeless financial safety internet, reducing anxiety regularly associated with the direction of new funds. Users gain confidence that an intelligent assistant is constantly monitoring their financial vitality.
+
+•	Tailored Banking Experience: Jargon Machine Intelligence transforms a transactional link into a truly advisory individual for Jargon AI clients. The user experience is more understood and valued, as the financial institution actively supports its financial expedition in order to increase loyalty and satisfaction.
+
+•	Responsible Credit and Investment: Jargon Machine Intelligence proposes appropriate loan rates and associated purchase opportunities based on a person's actual monetary mannerisms and tasks, promoting reliable borrowing and intelligent financing, promoting a better economic environment.
+2.	Why Jargon AI is a Good Solution?
+Jargon AI is great since it solves the downsides and challenges of old school budgeting and general financial apps. Its power is in its customized, aggressive and comprehensive approach:
+•	Hyper-Personalization: It realizes that one-size-fits all-budgeting is not effective. And by being tailored to your income, your phase of life and how you spend your money, it’s the only way to truly have a financial plan that is relevant to you for your whole life.
+
+•	Proactive Intelligence: Jargon AI doesn’t just recite your spending habits: it predicts your future needs and presents solutions before potential financial disasters happen (for instance, automatically adjusting jar allocations for seasonal outlays).
+
+•	Seamless Integration: Incorporation is beautiful. It integrates a variety of AI features - from image recognition for easy transaction tracking, through advanced NLP for conversational support, up to predictive analytics for personalized product offerings - in a single, seamless experience.
+
+•	Actionable Insights: It doesn’t just show you information, it turns your insights into straight forward, actionable advice that you can take action on today to help improve your financial well-being.
+3.	Why Jargon is Better Than Competitors?
+Compared to competitors already in the Vietnam market, like Momo AI, Jargon AI provides certain advantages including:
+Momi AI (from Momo) Overview: Momo is a popular mobile payment super app in Vietnam, with a wide array of features that include payments, bill pay, P2P transfers, ticketing, and some financial services like savings, loans (often via partners), and simple spending categorization. It leans on AI for security, recommendations across its many services and some automated spending classification and loan approvals. It also offers automatic invoice information recognition from photos for transaction input.
+Comparison table between Jargon AI and Moni AI (competitor from Momo)
+Feature	Jargon AI (for Jargon AI)	MoMo AI (Moni AI Chatbot / General AI Features)
+Dynamic & Predictive Jar Allocation	✔ (Core feature: AI dynamically adjusts "jars" based on user, seasonality, predictions)	✖ (Focuses on automatic classification and reminders, not dynamic allocation adjustment based on predictive behavior)
+Automated Transaction Classification	✔ (Based on description, AI identifies categories)	✔ (AI automatically classifies transactions into categories like food, shopping, entertainment)
+Image-Based Transaction Recognition	✔ (Upload/capture bill image; AI extracts data & classifies into jar)	✔ (AI helps input invoices from photos; automatically recognizes and adds info to user's list)
+Proactive Spending Predictions	✔ (Predicts future expenses like seasonal bills; adjusts jars accordingly)	✖ (Focuses more on reminding to avoid overspending and analyzing past expenses, less on proactive budget adjustment)
+AI Agent Chatbot (Conversational)	✔ (24/7 support for complex queries, jar transfers, personalized financial planning)	✔ (Moni AI helps manage spending via analysis, alerts, and savings suggestions interact with system functions; General Gen AI Chatbot for customer service)
+Personalized Savings Plan Generation	✔ (Chatbot generates detailed, actionable plans for user-defined goals, e.g., laptop saving)	✖ (While it suggests savings strategies, explicit detailed plan generation based on spending habits is not emphasized)
+Contextual Jargon AI Product Promotion	✔ (Proactively suggests specific Jargon AI loans, currency exchange, investments based on user behavior & predictions)	✖ (Momo offers various financial products, often via partners; AI provides general recommendations for its broad platform, not specific to a single bank's direct offerings)
+Interactive Financial Visualization	✔ (Comprehensive dashboards: spending breakdowns, income/expense trends, jar performance, goal trackers)	✖ (Basic spending tracking visuals may exist, but not emphasized as a comprehensive, interactive suite)
+Integration with Core Banking	✔ (Built for deep integration with Jargon AI's systems, enhancing bank-customer relationship)	✖ (Acts as a super app layered over banks, rather than deeply integrated within one bank's core system)
+Figure 1: Comparision Table between Jargon AI and Moni AI
+
+Deep Dive into Solution 
+Process 1: User Onboarding
+Function
+•	Gets user info (age, where they live), what they want to achieve, and how risky they are with money using a quick quiz.
+
+•	Calculates how much money they should save based on where they live.
+Data flow & storage
+•	In: User → P1 (demographics & goals)
+
+
+•	Out: P1 → UserProfiles (persist baseline profile + goals)
+Tech notes
+•	Quiz works using React/Flutter.
+
+•	The behind-the-scenes stuff uses Node.js/Go (REST/GraphQL) and checks if your info is valid.
+
+•	Data is stored safely in a database like S3 Bucket.
+Process 2: Receipt OCR
+Function
+•	Captures images of your receipts.
+•	It cleans everything up and pulls out the necessary information.
+Data flow & storage
+•	In: User → P2 (image)
+
+•	Out: P2 → P3 (JSON of merchant, date, line-items)
+Tech notes
+•	It makes use of tools like or AWS Textract to read the receipt within AWS Lambda.
+Process 3: Transaction Classification
+Function
+•	Using NLP to classify transactions that come in through APIs or are extracted via OCR into specific jars.
+
+•	You'll get real-time advice if you go over your jar budgets.
+Data flow & storage
+•	In: P2 → P3 (OCR JSON), U → P3 (chat/API tx)
+
+•	Out:
+o	P3 → TransactionHistory (write classified tx)
+
+o	P3 → P5 (trigger re-allocation)
+Tech notes
+•	We’re using a fine-tuned DistilBERT (or Sentence-Transformer) container to ensure low-latency inference. But in case we don’t have good training data, we could use LLM for classification with good prompt engineering.
+
+•	There’s a function-calling layer in place to provide immediate advice.
+Process 4: Forecasting Engine
+Function
+•	It handles both batch and streaming forecasts for seasonal or one-time expenses.
+
+•	To keep things up to date, we retrain our Prophet models using a sliding window approach.
+Data flow & storage
+•	In: TransactionHistory → P4 (historical flows)
+
+•	Out: P4 → ModelData (updated forecast parameters/metrics)
+Tech notes
+•	When it comes to tech, we're managing everything through Amazon Managed Workflows for Apache Airflow (MWAA).
+
+•	Our models are safely stored in S3, and we’ve got versioning in place to keep track of all the changes.
+Process 5: Jar Allocation Engine
+Function
+•	User cohort rules
+
+•	Forecast adjustments (P4)
+
+•	Real-time spending discipline (P3)
+Data flow & storage
+•	In:
+o	TransactionHistory → P5 (recent actuals)
+
+o	ModelData → P5 (forecasts)
+•	Out:
+o	P5 → UserProfiles (jar rules + balances)
+
+o	P5 → P7 (data for visualization)
+Tech notes
+•	Allocation logic is handled by a rule-engine microservice (e.g., Drools or a custom Go service) deployed on AWS (e.g., ECS or Lambda), with a REST API interface serving both the UI and chatbot.
+Process 6: Product Recommendation
+Function
+•	We customize Jargon AI’s product promotions (like loans, foreign exchange, and investments) based on:
+o	Your profile and goals
+o	Spending and income habits
+o	Future forecasts
+o	CRM eligibility
+Data flow & storage
+•	In:
+o	UserProfiles → P6
+
+o	TransactionHistory → P6
+
+o	ModelData → P6
+
+o	ProductCatalog → P6
+
+•	Out: P6 → User (recommendations)
+Tech notes
+•	We’re using a hybrid method that combines machine learning scores with rule-based filters, along with secure API integration for CRM.
+Process 7: Visualization Module
+Function
+•	Create interactive charts that showcase category breakdowns, trends, jar histories, goal trackers, and forecast overlays.
+Data flow & storage
+•	In:
+o	UserProfiles → P7
+
+o	TransactionHistory → P7
+
+o	ModelData → P7
+
+•	Out: P7 → User (UI dashboards)
+
+Tech notes
+•	Frontend: React combined with D3.js or Chart.js
+
+•	Backend: An aggregation service that pre-computes rollups for quick queries
+
+
+ 	Process 8: Chatbot (RAG-enabled)
+Function
+•	This is a Q&A system powered by a large language model (LLM) that offers insights into financial data and knowledge about Jargon AI.
+
+•	It makes function calls to essential services like update_transaction_record() and update_jar().
+Data flow & storage
+•	In: User → P8 (query)
+
+•	Context from:
+
+o	KB → P8 (bank policies/FAQs)
+
+o	ProductCatalog → KB
+
+o	UserProfiles → KB
+
+o	ModelData → P8 (forecast context)
+
+•	Out:
+
+
+o	P8 → U (answer)
+o	Calls to TransactionHistory & UserProfiles as needed
+Tech notes
+•	The system uses a retrieval-augmented generation (RAG) pipeline powered by Amazon OpenSearch and vector embeddings (via Pinecone, Weaviate, or OpenSearch KNN), combined with OpenAI or a custom LLM hosted on AWS to generate contextually accurate responses.
+ 
+Figure 2. Level 2 Data Flow Diagram of Jargon AI
+
+
+
+
+
+
+
+
+
+
+Architecture of Solution 
+ 
+Figure 3: AWS Architecture Diagram of Jargon AI
+Here’s the detailed description for each of the numbered components (1–6) in your AWS Architecture Diagram, following your provided structure and system concept:
+① Front-End & API Layer (User Interaction & Authentication)
+•	Components: Amazon CloudFront, Amazon Cognito, Amazon API Gateway, and React App
+•	Description:
+This layer serves as the Jargon AI platform's user interface. For optimal performance, users engage with a React frontend that is hosted globally via Amazon CloudFront. User authorization and authentication (such as sign-up, login, and identity management) are managed by Amazon Cognito.
+•	After authentication, the Amazon API Gateway connects the React application to backend services, sending secure API requests to AWS Lambda so that business logic can be executed.
+② OCR & Document Parsing (Intelligent Bill Capture)
+•	Components: Amazon Textract and AWS Lambda
+•	Description:
+Image-based document recognition is covered in this section. Amazon Textract is triggered by AWS Lambda when users upload bills or receipts, and it uses optical character recognition (OCR) to extract important fields (such as the merchant, date, and amount).
+③ Knowledge Base for RAG (Retrieval-Augmented Generation)
+•	Components: Text Embeddings, Amazon Bedrock Knowledge Base, and Amazon S3
+•	Description:
+LLM-driven insights and the AI Agent Chatbot are supported in this section. Amazon S3 is where documents like Jargon AI Products and Financial Management Tips are kept.
+By converting these documents into text embeddings, a Bedrock Knowledge Base is created that improves chatbot responses through Retrieval-Augmented Generation (RAG), which incorporates pertinent outside data into user conversations.
+④ Amazon Bedrock LLM Agent (Conversational Orchestration)
+•	Components: Amazon Bedrock, AWS Lambda
+•	Description:
+This agent is the main LLM interface that drives financial analysis, real-time conversations, tailored responses, and action execution (such as redistributing jars or examining trends).
+AWS Lambda is triggered by incoming user messages, and the Bedrock Agent is then called to process the natural language, produce insights, and call auxiliary services (such as data fetch, goal suggestions, and notifications).
+⑤ User Financial Data Management
+•	Components: Amazon DynamoDB
+•	Description:
+Amazon DynamoDB securely stores all user data that is specific to each individual. This comprises: Details about the user profile; Portfolio information; Jar allocations; Past transactions; Monitoring goals
+This structured data ensures real-time synchronization between chatbot interactions and user data, supporting both financial analytics and LLM orchestration.
+⑥ Predictive Modeling & Insights Layer
+•	Components: Amazon Forecast, Amazon Personalize, AWS Glue, S3 Data Lake, Amazon Athena, Amazon Quicksight, and Amazon Pinpoint are among the components.
+•	Description: This analytical pipeline offers spending projections, visual insights, and tailored recommendations:
+o	Amazon Forecast forecasts future revenue and expenses.
+o	Jargon AI product promotions and financial advice are customized by Amazon Personalize.
+o	Structured and unstructured data are processed by AWS Glue and stored in a data lake.
+o	Historical data querying is made possible by Amazon Athena.
+o	Jar usage, spending patterns, and objectives are visualized by Amazon Quicksight.
+o	Amazon Pinpoint provides financial warnings (such as overspending and payment reminders), promotional content, and personalized alerts.
