@@ -1,0 +1,39 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Profile Card -->
+  <rect x="100" y="60" width="200" height="130" rx="10" fill="#10B981" />
+  <rect x="120" y="80" width="70" height="8" rx="4" fill="#D1FAE5" />
+  <rect x="120" y="100" width="50" height="8" rx="4" fill="#D1FAE5" opacity="0.7" />
+  <rect x="120" y="120" width="160" height="4" rx="2" fill="#D1FAE5" opacity="0.5" />
+  <rect x="120" y="135" width="140" height="4" rx="2" fill="#D1FAE5" opacity="0.5" />
+  <rect x="120" y="150" width="120" height="4" rx="2" fill="#D1FAE5" opacity="0.5" />
+  <circle cx="240" cy="100" r="25" fill="#34D399" />
+  <path d="M230 100 L 237 107 L 250 94" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Document -->
+  <rect x="80" y="160" width="100" height="120" rx="6" fill="#FFFFFF" filter="url(#shadow)" />
+  <rect x="95" y="180" width="70" height="6" rx="3" fill="#CBD5E1" />
+  <rect x="95" y="195" width="55" height="6" rx="3" fill="#CBD5E1" />
+  <rect x="95" y="210" width="70" height="50" rx="3" fill="#ECFDF5" />
+
+  <!-- Credit Card -->
+  <rect x="220" y="200" width="100" height="60" rx="8" fill="#F43F5E" filter="url(#shadow)" />
+  <rect x="235" y="220" width="40" height="6" rx="3" fill="#FFFFFF" opacity="0.8" />
+  <rect x="235" y="235" width="70" height="6" rx="3" fill="#FFFFFF" opacity="0.6" />
+
+  <!-- Lock Icon -->
+  <rect x="300" y="100" width="45" height="60" rx="8" fill="#059669" filter="url(#shadow)" />
+  <rect x="310" y="120" width="25" height="30" rx="4" fill="#34D399" />
+  <path d="M317.5 100 L 317.5 115 M 327.5 100 L 327.5 115" stroke="#059669" stroke-width="6" stroke-linecap="round" />
+  <circle cx="322.5" cy="135" r="5" fill="#D1FAE5" />
+
+  <!-- Circle Checkmark -->
+  <circle cx="160" cy="90" r="20" fill="#4ADE80" filter="url(#shadow)" />
+  <path d="M150 90 L 157 97 L 170 84" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Filters -->
+  <defs>
+    <filter id="shadow" x="-5" y="-5" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.2" />
+    </filter>
+  </defs>
+</svg> 

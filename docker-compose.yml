@@ -1,0 +1,29 @@
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.docker
+    environment:
+      - NODE_ENV=development
+    networks:
+      - jargon-network
+
+  ml-service:
+    build:
+      context: ./time_series_ML
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    networks:
+      - jargon-network
+
+networks:
+  jargon-network:
+    driver: bridge 
+

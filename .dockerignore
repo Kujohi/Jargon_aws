@@ -1,0 +1,52 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+.next
+out
+
+# Environment files
+.env*.local
+.env.docker
+
+# IDE files
+.vscode
+.idea
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Lambda ML files (no longer needed in main app)
+lambda_ml/
+time_series_ML/
+
+# Deployment scripts
+deploy-*.sh
+stop-*.sh
+*.json.bak
+
+# Debug files
+debug_output/
+
+# Test files
+test-*.js
+
+# Infrastructure files
+infrastructure/ 

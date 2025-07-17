@@ -1,0 +1,105 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-southeast-1
+  ECR_REPOSITORY_APP: jargon-nextjs
+  ECR_REPOSITORY_ML: jargon-ml
+  ECS_SERVICE_APP: jargon-nextjs-service
+  ECS_SERVICE_ML: jargon-ml-service
+  ECS_CLUSTER: jargon-production
+
+jobs:
+  deploy:
+    name: Deploy to AWS
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+
+    - name: Build, tag, and push Next.js image to Amazon ECR
+      id: build-app-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        # Build the Docker image
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_APP:latest .
+        
+        # Push the images
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY_APP:latest
+        
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY_APP:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+    - name: Build, tag, and push ML service image to Amazon ECR
+      id: build-ml-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        # Build the Docker image for ML service
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_ML:$IMAGE_TAG ./time_series_ML
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_ML:latest ./time_series_ML
+        
+        # Push the images
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY_ML:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY_ML:latest
+        
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY_ML:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+    - name: Fill in the new image ID in the Amazon ECS task definition for Next.js
+      id: task-def-app
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: infrastructure/task-definition-app.json
+        container-name: nextjs-app
+        image: ${{ steps.build-app-image.outputs.image }}
+
+    - name: Fill in the new image ID in the Amazon ECS task definition for ML service
+      id: task-def-ml
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: infrastructure/task-definition-ml.json
+        container-name: ml-service
+        image: ${{ steps.build-ml-image.outputs.image }}
+
+    - name: Deploy Amazon ECS task definition for Next.js
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def-app.outputs.task-definition }}
+        service: ${{ env.ECS_SERVICE_APP }}
+        cluster: ${{ env.ECS_CLUSTER }}
+        wait-for-service-stability: true
+
+    - name: Deploy Amazon ECS task definition for ML service
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def-ml.outputs.task-definition }}
+        service: ${{ env.ECS_SERVICE_ML }}
+        cluster: ${{ env.ECS_CLUSTER }}
+        wait-for-service-stability: true
+
+    - name: Summary
+      run: |
+        echo "🚀 Deployment completed successfully!"
+        echo "Next.js App Image: ${{ steps.build-app-image.outputs.image }}"
+        echo "ML Service Image: ${{ steps.build-ml-image.outputs.image }}" 
